@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dela recept</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="share-page">
+
+    <header class="main-header">
+        <nav aria-label="Huvudmeny">
+           <li><a href="./meny.html">Recept</a></li>
+           <li><a href="./index.html">Om sajten</a></li>
+           <li><a href="./dela.html">Dela recept</a></li>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <h1>Dela ditt recept</h1>
+        <p>Har du ett gott recept? Dela det med oss!</p>
+
+        <form class="recipe-form">
+
+            <fieldset>
+                <legend>Om receptet</legend>
+
+                <label for="recipe-name">Receptets namn *</label>
+                <input type="text" id="recipe-name" name="recipe-name" required>
+
+                <label for="category">Kategori</label>
+                <select id="category" name="category">
+                    <option value="">Välj kategori</option>
+                    <option value="frukost">Frukost</option>
+                    <option value="middag">Middag</option>
+                    <option value="efterratt">Efterrätt</option>
+                    <option value="fika">Fika</option>
+                </select>
+
+                <div class="form-row">
+                    <div>
+                        <label for="time">Tid i minuter</label>
+                        <input type="number" id="time" name="time" min="1">
+                    </div>
+
+                    <div>
+                        <label for="portions">Antal portioner</label>
+                        <input type="number" id="portions" name="portions" min="1">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Svårighetsgrad</legend>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="difficulty" value="latt">
+                        Lätt
+                    </label>
+
+                    <label>
+                        <input type="radio" name="difficulty" value="medel">
+                        Medel
+                    </label>
+
+                    <label>
+                        <input type="radio" name="difficulty" value="svar">
+                        Svår
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Receptet</legend>
+
+                <label for="ingredients">Ingredienser *</label>
+                <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+
+                <label for="instructions">Gör så här *</label>
+                <textarea id="instructions" name="instructions" rows="6" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Om dig</legend>
+
+                <label for="name">Ditt namn</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">E-post *</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <button type="submit">Skicka recept</button>
+
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <p>© Receptsajten</p>
+    </footer>
+
+</body>
+</html>

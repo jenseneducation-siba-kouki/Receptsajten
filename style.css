@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-background: #d7c8c8;
+    --color-white: #ffffff;
+    --color-rubrik: #8b4b4b;
+    --color-text: #333333;
+    --color-light: #eee2e2;
+    --color-light-background: #f5eeee;
+    --color-border: #999999;
+    --color-error: #b00020; 
+
+    --font-main: monospace;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-main);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.main-header {
+    width: 100%;
+    padding: 1.4rem;
+    background-color: var(--color-white);
+    box-shadow: 0 1rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+.main-header nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+}
+.main-header a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+.main-header a:hover {
+    color: var(--color-rubrik);
+}
+.main-container {
+    width: 90%;
+    max-width: 75rem;
+    margin: 2.1rem auto;
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+}
+.recipe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2rem 1.9rem;
+    align-items: start;
+}
+.first-pic {
+    width: 100%;
+    margin: 0;
+}
+.first-pic img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.main {
+    padding: 0.5rem;
+    min-width: 0;
+}
+h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: var(--color-rubrik);
+    margin-bottom: 1rem;
+}
+.main p {
+    margin-bottom: 1rem;
+}
+.recipe-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+.recipe-facts div {
+    padding: 1rem 0.5rem;
+    background-color: var(--color-light);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.recipe-facts p {
+    font-size: 1rem;
+}
+.recipe-facts h3 {
+    color: var(--color-rubrik);
+}
+h2 {
+    font-size: 1.375rem;
+    color: var(--color-rubrik);
+    margin: 0 0 1.25rem;
+}
+.portions {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ingredienser ul {
+    list-style: none;
+    padding: 0;
+}
+.ingredienser li:has(input:checked) {
+    color: gray;
+    text-decoration: line-through;
+}
+.ingredienser label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.90rem;
+}
+.ingredienser input {
+    width: 1rem;
+    height: 1.125rem;
+    margin-top: 0.25rem;
+    accent-color: var(--color-rubrik);
+}
+.instructions ol {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+.instructions li {
+    margin-bottom: 0.75rem;
+}
+.serving {
+    grid-column: 1 / -1;
+    min-width: 0;
+}
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.images figure {
+    margin: 0;
+    background-color: var(--color-light);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(192, 192, 192, 0.5);
+    overflow: hidden;
+}
+.images img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+}
+.images figcaption {
+    padding: 0.80rem;
+    text-align: center;
+    font-weight: bold;
+}
+.main-footer {
+    width: 100%;
+    padding: 1.4rem;
+    background-color: var(--color-white);
+    text-align: center;
+    color: #555;
+}
+
+
+/* Meny sida */
+.recipe-form {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.recipe-form fieldset {
+    border: 1px solid var(--color-light);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+.recipe-form legend {
+    color: var(--color-rubrik);
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+.recipe-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.recipe-form input,
+.recipe-form select,
+.recipe-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.4rem;
+    font: inherit;
+}
+.recipe-form textarea {
+    resize: vertical;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.radio-group input {
+    width: auto;
+    margin: 0;
+    accent-color: var(--color-rubrik);
+}
+.recipe-form input:user-invalid,
+.recipe-form textarea:user-invalid {
+    border: 2px solid var(--color-error);
+}
+.recipe-form input:focus-visible,
+.recipe-form select:focus-visible,
+.recipe-form textarea:focus-visible,
+.recipe-form button:focus-visible {
+    outline: 2px solid var(--color-rubrik);
+    outline-offset: 3px;
+}
+.recipe-form button {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-rubrik);
+    color: var(--color-white);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+.recipe-form button:hover {
+    opacity: 0.85;
+}
